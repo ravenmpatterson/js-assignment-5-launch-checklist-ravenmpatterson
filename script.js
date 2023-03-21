@@ -30,7 +30,7 @@ window.addEventListener("load", function() {
         let cargoMassInput = Number(cargoMassInputs);
         console.log(pilotNameInput, copilotNameInput, fuelLevelInputs, cargoMassInputs)
         
-        formSubmission(document, list, pilotNameInput, copilotNameInput, fuelLevelInput, cargoMassInput);
+        formSubmission(document, list, pilotNameInput, copilotNameInput, fuelLevelInputs, cargoMassInputs);
 
        });
 });
