@@ -35,7 +35,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
        let fuelLevelInput = document.querySelector("input[name='fuelLevel']");
        let cargoMassInput = document.querySelector("input[name='cargoMass']");
        if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
-        alert("All fields are required!*****");
+        alert("All fields are required!");
        console.log("1234")
      }
    
