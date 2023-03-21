@@ -6,21 +6,38 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
    /*
                 <h2>Mission Destination</h2>
                 <ol>
-                    <li>Name: </li>
-                    <li>Diameter: </li>
-                    <li>Star: ${star}</li>
-                    <li>Distance from Earth: </li>
-                    <li>Number of Moons: </li>
+                    <li>Name:  ${i.name}</li>
+                    <li>Diameter: ${i.diameter}</li>
+                    <li>Star: ${i.star}</li>
+                    <li>Distance from Earth: ${i.distance}</li>
+                    <li>Number of Moons: ${i.moons}</li>
                 </ol>
-                <img src="">
+                <img src="${i.image}">
    */
 }
 
-function validateInput(testInput) {
-   
+function validateInput(testInput) { 
+   if (testInput === "") {
+    return "Empty";
+   }
+   else if (isNaN(Number(testInput))) {
+    return "Not a Number";
+   }
+   else if (!isNaN(Number(testInput))) {
+    return "Is a Number";
+   }
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
+
+       let pilotNameInput = document.querySelector("input[name='pilotName']");
+       let copilotNameInput = document.querySelector("input[name='copilotName']");
+       let fuelLevelInput = document.querySelector("input[name='fuelLevel']");
+       let cargoMassInput = document.querySelector("input[name='cargoMass']");
+       if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
+        alert("All fields are required!");
+       
+     }
    
 }
 
